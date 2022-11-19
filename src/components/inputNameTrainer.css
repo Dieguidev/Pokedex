@@ -1,0 +1,55 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85vh;
+  background-color: #E5E5E5;
+}
+.home img {
+  align-self: center;
+  width: 90vw;
+  margin-bottom: 40px;
+}
+
+.home h1 {
+  align-self: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #FE1936;  
+}
+
+.home p {
+  align-self: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #302F2F;
+}
+.home input {
+  text-align: center;
+  align-self: center;
+  width: 60vw;
+  height: 25px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.home button{
+  align-self: center;
+  width: 40vw;
+  height: 35px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  background-color: #D93F3F;
+}
+
+footer {
+  height: 15vh;
+  background-image: url('../assets/footer-image.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+

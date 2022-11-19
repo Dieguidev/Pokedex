@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import axios from 'axios'
 import PokemonCard from './PokemonCard';
 import { useNavigate } from 'react-router-dom';
+import style from './pokedex.css'
+import logoHeader from '../assets/logo-header.svg'
 
 const Pokedex = () => {
 
@@ -38,9 +40,9 @@ const Pokedex = () => {
     // console.log(pokemons)
   }
 
-// paginated
+// pagination
   const [page, setPage] = useState(1);
-  const pokemonsPerPage = 5;
+  const pokemonsPerPage = 20;
   const lastIndex = page * pokemonsPerPage;
   const firstIndex = lastIndex - pokemonsPerPage;
   const pokemonPaginated = pokemons.slice(firstIndex, lastIndex);
@@ -53,66 +55,64 @@ const Pokedex = () => {
 
   return (
     <div>
-      <h1>Pokedex</h1>
-      <p>Welcome {userNameTrainer}!</p>
-      <div>
-        {/* <input 
-          type="text" 
-          placeholder='search pokemon'
-          value={pokemonName}
-          onChange={e => setPokemonName(e.target.value.toLowerCase())}
-        />
-        <button onClick={serachPokemon}>Search</button> */}
-        <select onChange={filterType} name="" id="">
-          {typePokemon.map(type =>(
-            <option 
-              value={type.url}
-              key ={type.name}
-            >{type.name}</option>
+      <header>
+        <img src={logoHeader} alt="" />
+      </header>
+      <main>
+        <section className='search-pokemon'>
+          <p><span>Welcome {userNameTrainer}!,</span> here you can find your favorite pokemon</p>
+          <div>
+            <label>
+              <input list='pokemons' name='pokemons'
+                placeholder='Search name'
+                value={pokemonName}
+                onChange={e => setPokemonName(e.target.value)}
+              />
+              <datalist id='pokemons' >
+                {pokemons.map(pokemon =>(
+                  <option value={pokemon.name} key={pokemon.name}></option>
+                ))}
+              </datalist>
+              <button onClick={serachPokemon}>search</button>
+            </label>
+
+
+            <select onChange={filterType} name="" id="">
+              {typePokemon.map(type =>(
+                <option 
+                  value={type.url}
+                  key ={type.name}
+                >{type.name}</option>
+              ))}
+            </select>
+
+          </div>
+        </section>
+        
+        <section className='pagination'>
+          <button 
+            onClick={() => setPage(page-1)}
+            disabled = {page === 1}
+          >Prev Page</button>
+
+          <button 
+            onClick={() => setPage(page+1)}
+            disable = {page === totalPages}
+          >Next Page</button>
+          {numbers.map(number => (
+            <button onClick={() => setPage(number)}>{number}</button>
           ))}
-        </select>
+          
+        </section>
 
-        <label>
-          <input list='pokemons' name='pokemons'
-            value={pokemonName}
-            onChange={e => setPokemonName(e.target.value)}
-          />
-          <datalist id='pokemons' >
-            {pokemons.map(pokemon =>(
-              <option value={pokemon.name} key={pokemon.name}></option>
+        <section>
+          <ul>
+            {pokemonPaginated.map(pokemon => (
+              <PokemonCard url={pokemon.url ? pokemon.url : pokemon.pokemon.url} key={pokemon.url ? pokemon.url : pokemon.pokemon.url}/>
             ))}
-          </datalist>
-          <button onClick={serachPokemon}>search</button>
-        </label>
-      </div>
-      
-
-      <div>
-        <button 
-          onClick={() => setPage(page+1)}
-          disable = {page === totalPages}
-        >Next Page</button>
-        {numbers.map(number => (
-          <button onClick={() => setPage(number)}>{number}</button>
-        ))}
-        <button 
-          onClick={() => setPage(page-1)}
-          disabled = {page === 1}
-        >Prev Page</button>
-      </div>
-
-      <ul>
-        {pokemonPaginated.map(pokemon => (
-          <PokemonCard url={pokemon.url ? pokemon.url : pokemon.pokemon.url} key={pokemon.url ? pokemon.url : pokemon.pokemon.url}/>
-        ))}
-      </ul>
-
-      {/* <ul>
-        {pokemons.map(pokemon => (
-          <PokemonCard url={pokemon.url ? pokemon.url : pokemon.pokemon.url} key={pokemon.url ? pokemon.url : pokemon.pokemon.url}/>
-        ))}
-      </ul> */}
-      
+          </ul>
+        </section>
+      </main>
     </div>
   );
 };

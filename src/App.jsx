@@ -5,6 +5,7 @@ import InputNameTrainer from './components/InputNameTrainer'
 import Pokedex from './components/Pokedex'
 import PokedexId from './components/PokedexId'
 import ProtectedRoutes from './components/ProtectedRoutes'
+import footerimage from './assets/footer-image.svg'
 
 function App() {
 
@@ -19,6 +20,9 @@ function App() {
           <Route path='/pokedex/:id' element={<PokedexId />} />
         {/* </Route> */}
       </Routes>
+      <footer>
+
+      </footer>
     </HashRouter>
     
   )

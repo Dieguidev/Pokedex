@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { changeName } from '../store/slices/name.slice';
+import style from './inputNameTrainer.css'
+import logo from '../assets/logo-pokedex.svg'
 
 
 const InputNameTrainer = () => {
@@ -18,16 +20,23 @@ const InputNameTrainer = () => {
 
 
   return (
-    <div>
-      <h1>Input Name Trainer</h1>
-      <input 
-        type="text" 
-        onChange={e=> setUserNameTrainer(e.target.value)}
-        value={userNameTrainer}
-      />
-      <button onClick={enterName}>Enter Name</button>
+    <>
+      <main className='home'>
+        <img src={logo} alt="zsc" />
+        <h1>Hello trainer!</h1>
+        <p>to start, give me your name</p>
+        <input 
+          type="text" 
+          placeholder='your name'
+          onChange={e=> setUserNameTrainer(e.target.value)}
+          value={userNameTrainer}
+        />
+        <button onClick={enterName}>Enter Name</button>
+      </main>
+      
 
-    </div>
+    </>
+    
   );
 };
 

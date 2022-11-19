@@ -1,0 +1,49 @@
+header img {
+  height: 100%;
+  width: 100vw;
+}
+
+span {
+  font-weight: bold;
+}
+
+.search-pokemon p{
+ font-size: 20px;
+ margin: 5px ;
+}
+
+.search-pokemon div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+label input {
+  height: 25px;
+  padding: 5px;
+  width: 200px;
+  color: #D3D3D3;
+
+}
+
+label button {
+  height: 25px;
+  margin: 5px;
+  width: 60px;
+  background-color: #D93F3F;
+  color: white;
+  border: none;
+}
+
+select {
+  height: 25px;
+  margin: 5px;
+  width: 90px;
+  padding-left: 8px;
+  color: #0F0F2D;
+}
+
+.pagination {
+  margin: 5px;
+}
