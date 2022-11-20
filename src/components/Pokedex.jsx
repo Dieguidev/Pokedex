@@ -6,6 +6,7 @@ import PokemonCard from './PokemonCard';
 import { useNavigate } from 'react-router-dom';
 import style from './pokedex.css'
 import logoHeader from '../assets/logo-header.svg'
+import logo from '../assets/logo-pokedex.svg'
 
 const Pokedex = () => {
 
@@ -60,6 +61,9 @@ const Pokedex = () => {
       </header>
       <main>
         <section className='search-pokemon'>
+          <div className='logo-content'>
+            <img src={ logo } alt="" />
+          </div>
           <p><span>Welcome {userNameTrainer}!,</span> here you can find your favorite pokemon</p>
           <div>
             <label>
@@ -91,18 +95,21 @@ const Pokedex = () => {
         
         <section className='pagination'>
           <button 
+            className='button-pagination'
             onClick={() => setPage(page-1)}
             disabled = {page === 1}
           >Prev Page</button>
-
+          <div>
+            {numbers.map(number => (
+            <button onClick={() => setPage(number)}>{number}</button>
+            ))}
+          </div>
+          
           <button 
+            className='button-pagination'
             onClick={() => setPage(page+1)}
             disable = {page === totalPages}
           >Next Page</button>
-          {numbers.map(number => (
-            <button onClick={() => setPage(number)}>{number}</button>
-          ))}
-          
         </section>
 
         <section>

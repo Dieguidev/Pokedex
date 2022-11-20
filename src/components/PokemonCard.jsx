@@ -14,12 +14,12 @@ const PokemonCard = ({url}) => {
       .then(res => setPokemon(res.data))
   },[])
 
-  console.log(pokemon)
+  // console.log(pokemon)
 
   const type2 = pokemon.types?.[1]?.type.name
 
   return (
-    <Link to={`/pokedex/${pokemon.id}`} key={pokemon.id}>
+    <Link to={`/pokedex/${pokemon.id}`} key={pokemon.id} className='list'>
       <div className='card' key={pokemon.id}>
         <div className='rectangle'></div>
         <img src={pokemon.sprites?.other.dream_world.front_default} alt="" />

@@ -1,6 +1,21 @@
+header{
+  margin-bottom: -9px;
+}
+
 header img {
   height: 100%;
   width: 100vw;
+  background-color: #E5E5E5;
+}
+
+main {
+  background-color: #E5E5E5;
+}
+
+.logo-content {
+  display: flex;
+  height: 80px;
+  padding: 8px;
 }
 
 span {
@@ -9,7 +24,13 @@ span {
 
 .search-pokemon p{
  font-size: 20px;
- margin: 5px ;
+ margin: 0 8px;
+
+}
+
+.search-pokemon img {
+  width: 80vw;
+  align-self: center;
 }
 
 .search-pokemon div {
@@ -46,4 +67,19 @@ select {
 
 .pagination {
   margin: 5px;
+  display: flex;
+}
+
+.pagination button{
+  background-color: none;
+  border: none;
+  margin: 0 5px;
+}
+
+.pagination .button-pagination {
+  background-color: #DD1A1A;
+  color: #FBFBFB;
+  height: 60pxpx;
+  width: 100px;
+  margin: 15px 0;
 }

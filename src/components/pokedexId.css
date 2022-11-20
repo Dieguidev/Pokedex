@@ -1,0 +1,137 @@
+.habilities {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-top: 80px;
+  background-color: #ffffff;
+}
+
+.rectagleInID{
+  margin: 2px;
+}
+
+.habilities img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  align-self: center;
+  top: -60px;
+  width: 150px;
+  height: 150px;
+}
+
+.pokemonDates-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.idPokemon{
+  font-size: 25px;
+  margin: 6px;
+}
+
+.pokemos-name {
+  font-size: 38px;
+}
+
+.pokemonHeightWeight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 5px;
+}
+
+.pokemonHeightWeight--dates {
+  text-align: center;
+}
+
+.pokemonHeightWeight--dates p{
+  font-size: 12px;
+}
+
+.pokemonTypeHabilities {
+  display: flex;
+  margin: 8px;
+  gap: 20px;
+}
+
+.pokemonTypeHabilities-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemonTypeHabilities-detail {
+  width: 100%;
+  display: flex;
+  margin: 8px;
+  gap: 3px;
+}
+
+.pokemonTypeHabilities-detail p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  font-size: 13px;
+  background-color: blueviolet;
+}
+
+.pokemonStats {
+  margin: 20px;
+  text-align: center;
+}
+
+.pokemonStats h2{
+  margin-bottom: 10px;
+}
+
+.pokemonStats label {
+
+  height: 100px;
+
+}
+
+.pokemonStats progress {
+  width: 200px;
+  background-color: #F6F6F6;
+  
+}
+
+.pokemonStats > p {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.pokemonMovements-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 15px;
+  
+}
+
+.pokemonMovements-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pokemonMovements-container p{
+  display: inline-block;
+  padding: 3px 8px;
+  margin: 0 8px 8px 0;
+  border-radius: 50px;
+  font-size: 16px;
+  color: #302F2F;
+  background-color: #E5E5E5;
+}
