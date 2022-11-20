@@ -80,15 +80,17 @@ const Pokedex = () => {
               <button onClick={serachPokemon}>search</button>
             </label>
 
-
-            <select onChange={filterType} name="" id="">
+            <div >
+              <select onChange={filterType} name="" id="">
               {typePokemon.map(type =>(
                 <option 
                   value={type.url}
                   key ={type.name}
                 >{type.name}</option>
               ))}
-            </select>
+              </select>
+            </div>          
+            
 
           </div>
         </section>
@@ -113,11 +115,11 @@ const Pokedex = () => {
         </section>
 
         <section>
-          <ul>
+          <div className='list-content'>
             {pokemonPaginated.map(pokemon => (
               <PokemonCard url={pokemon.url ? pokemon.url : pokemon.pokemon.url} key={pokemon.url ? pokemon.url : pokemon.pokemon.url}/>
             ))}
-          </ul>
+          </div>
         </section>
       </main>
     </div>

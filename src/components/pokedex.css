@@ -16,6 +16,8 @@ main {
   display: flex;
   height: 80px;
   padding: 8px;
+  max-width: 450px;
+  align-self: center;
 }
 
 span {
@@ -30,6 +32,7 @@ span {
 
 .search-pokemon img {
   width: 80vw;
+  max-width: 450px;
   align-self: center;
 }
 
@@ -57,9 +60,8 @@ label button {
   border: none;
 }
 
-select {
+ div select {
   height: 25px;
-  margin: 5px;
   width: 90px;
   padding-left: 8px;
   color: #0F0F2D;
@@ -82,4 +84,11 @@ select {
   height: 60pxpx;
   width: 100px;
   margin: 15px 0;
+}
+
+@media (min-width:700px){
+  .list-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

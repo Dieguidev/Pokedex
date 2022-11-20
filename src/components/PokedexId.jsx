@@ -30,7 +30,7 @@ const PokedexId = () => {
 
       <main>
         <section>
-        <div className='logo-content'>
+          <div className='logo-content'>
             <img src={ logo } alt="" />
           </div>
         </section>
@@ -57,7 +57,8 @@ const PokedexId = () => {
                 <h4>Type</h4>
                 <div className='pokemonTypeHabilities-detail'>
                   <p>{pokemon.types?.[0].type.name}</p>
-                  <p>{pokemon.types?.[1]?.type.name? `${type2}`: ''}</p>
+                  {pokemon.types?.[1]?.type.name? <p>{`${type2}`}</p>: ''}
+                  {/* <p>{pokemon.types?.[1]?.type.name? `${type2}`: ''}</p> */}
                 </div>
               </div>
               <div className='pokemonTypeHabilities-content'>

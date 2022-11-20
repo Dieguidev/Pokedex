@@ -94,13 +94,12 @@
 }
 
 .pokemonStats label {
-
   height: 100px;
-
 }
 
 .pokemonStats progress {
-  width: 200px;
+  width: 60%;
+  max-width: 580px;
   background-color: #F6F6F6;
   
 }
@@ -135,3 +134,7 @@
   color: #302F2F;
   background-color: #E5E5E5;
 }
+
+
+  
+
