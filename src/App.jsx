@@ -15,10 +15,10 @@ function App() {
       <Routes>
         <Route path='/' element={<InputNameTrainer />}/>
 
-        {/* <Route element={<ProtectedRoutes />}> */}
+        <Route element={<ProtectedRoutes />}>
           <Route path='/pokedex' element={<Pokedex />} />
           <Route path='/pokedex/:id' element={<PokedexId />} />
-        {/* </Route> */}
+        </Route>
       </Routes>
       <footer>
 
