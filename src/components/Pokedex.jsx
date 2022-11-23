@@ -26,6 +26,8 @@ const Pokedex = () => {
       .then(res => setTypePokemon(res.data.results))
   },[])
 
+  // console.log(typePokemon)
+
 
 
 
@@ -72,7 +74,7 @@ const Pokedex = () => {
                 value={pokemonName}
                 onChange={e => setPokemonName(e.target.value)}
               />
-              <datalist id='pokemons' >
+              <datalist id='pokemons'>
                 {pokemons.map(pokemon =>(
                   <option value={pokemon.name} key={pokemon.name}></option>
                 ))}
@@ -120,6 +122,25 @@ const Pokedex = () => {
               <PokemonCard url={pokemon.url ? pokemon.url : pokemon.pokemon.url} key={pokemon.url ? pokemon.url : pokemon.pokemon.url}/>
             ))}
           </div>
+        </section>
+        
+        <section className='pagination'>
+          <button 
+            className='button-pagination'
+            onClick={() => setPage(page-1)}
+            disabled = {page === 1}
+          >Prev Page</button>
+          <div>
+            {numbers.map(number => (
+            <button onClick={() => setPage(number)}>{number}</button>
+            ))}
+          </div>
+          
+          <button 
+            className='button-pagination'
+            onClick={() => setPage(page+1)}
+            disable = {page === totalPages}
+          >Next Page</button>
         </section>
       </main>
     </div>

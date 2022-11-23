@@ -78,6 +78,13 @@ label button {
   margin: 0 5px;
 }
 
+.pagination button:hover {
+  background-color: #DD1A1A;
+  color: white;
+  padding: 3px;
+  cursor: pointer;
+}
+
 .pagination .button-pagination {
   background-color: #DD1A1A;
   color: #FBFBFB;
