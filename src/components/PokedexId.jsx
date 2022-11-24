@@ -20,7 +20,125 @@ const PokedexId = () => {
 
   // console.log(pokemon)
 
-  const type2 = pokemon.types?.[1]?.type.name
+  let type2 = pokemon.types?.[1]?.type.name
+
+  let type1 = pokemon.types?.[0]?.type.name
+  let colorByTypeOfPokemon = "";
+  let colorByTypeOfPokemon2 = "";
+  
+    switch (type1){
+      case 'normal':
+        colorByTypeOfPokemon = 'normalColor'
+        break;
+      case 'fighting':
+        colorByTypeOfPokemon = 'fightingColor'
+        break;
+      case 'flying':
+        colorByTypeOfPokemon = 'flyingColor'
+        break;
+      case 'poison':
+        colorByTypeOfPokemon = 'poisonColor'
+        break;
+      case 'ground':
+        colorByTypeOfPokemon = 'groundColor'
+        break;
+      case 'rock':
+        colorByTypeOfPokemon = 'rockColor'
+        break;
+      case 'bug':
+        colorByTypeOfPokemon = 'bugColor'
+        break;
+      case 'ghost':
+        colorByTypeOfPokemon = 'ghostColor'
+        break;
+      case 'steel':
+        colorByTypeOfPokemon = 'steelColor'
+        break;
+      case 'fire':
+        colorByTypeOfPokemon = 'fireColor'
+        break;
+      case 'water':
+        colorByTypeOfPokemon = 'waterColor'
+        break;
+      case 'grass':
+        colorByTypeOfPokemon = 'grassColor'
+        break;
+      case 'electric':
+        colorByTypeOfPokemon = 'electricColor'
+        break;
+      case 'psychic':
+        colorByTypeOfPokemon = 'psychicColor'
+        break;
+      case 'ice':
+        colorByTypeOfPokemon = 'iceColor'
+        break;
+      case 'dragon':
+        colorByTypeOfPokemon = 'dragonColor'
+        break;
+      case 'dark':
+        colorByTypeOfPokemon = 'darkColor'
+        break;
+      case 'fairy':
+        colorByTypeOfPokemon = 'fairyColor'
+        break;
+    }
+
+      switch (type2){
+      case 'normal':
+        colorByTypeOfPokemon2 = 'normalColor'
+        break;
+      case 'fighting':
+        colorByTypeOfPokemon2 = 'fightingColor'
+        break;
+      case 'flying':
+        colorByTypeOfPokemon2 = 'flyingColor'
+        break;
+      case 'poison':
+        colorByTypeOfPokemon2 = 'poisonColor'
+        break;
+      case 'ground':
+        colorByTypeOfPokemon2 = 'groundColor'
+        break;
+      case 'rock':
+        colorByTypeOfPokemon2 = 'rockColor'
+        break;
+      case 'bug':
+        colorByTypeOfPokemon2 = 'bugColor'
+        break;
+      case 'ghost':
+        colorByTypeOfPokemon2 = 'ghostColor'
+        break;
+      case 'steel':
+        colorByTypeOfPokemon2 = 'steelColor'
+        break;
+      case 'fire':
+        colorByTypeOfPokemon2 = 'fireColor'
+        break;
+      case 'water':
+        colorByTypeOfPokemon2 = 'waterColor'
+        break;
+      case 'grass':
+        colorByTypeOfPokemon2 = 'grassColor'
+        break;
+      case 'electric':
+        colorByTypeOfPokemon2 = 'electricColor'
+        break;
+      case 'psychic':
+        colorByTypeOfPokemon2 = 'psychicColor'
+        break;
+      case 'ice':
+        colorByTypeOfPokemon2 = 'iceColor'
+        break;
+      case 'dragon':
+        colorByTypeOfPokemon2 = 'dragonColor'
+        break;
+      case 'dark':
+        colorByTypeOfPokemon2 = 'darkColor'
+        break;
+      case 'fairy':
+        colorByTypeOfPokemon2 = 'fairyColor'
+        break;
+        }
 
   return (
     <div key={pokemon.name}>
@@ -56,14 +174,14 @@ const PokedexId = () => {
               <div className='pokemonTypeHabilities-content'>
                 <h4>Type</h4>
                 <div className='pokemonTypeHabilities-detail'>
-                  <p>{pokemon.types?.[0].type.name}</p>
-                  {pokemon.types?.[1]?.type.name? <p>{`${type2}`}</p>: ''}
+                  <p className={`${colorByTypeOfPokemon}`}>{pokemon.types?.[0].type.name}</p>
+                  {pokemon.types?.[1]?.type.name? <p className={`${colorByTypeOfPokemon2}`}>{`${type2}`}</p>: ''}
                   {/* <p>{pokemon.types?.[1]?.type.name? `${type2}`: ''}</p> */}
                 </div>
               </div>
               <div className='pokemonTypeHabilities-content'>
                 <h4>Habilities</h4>
-                <div className='pokemonTypeHabilities-detail'>
+                <div className='pokemonTypeHabilities2-detail'>
                   <p>{pokemon.abilities?.[0].ability.name}</p>
                   <p>{pokemon.abilities?.[1].ability.name}</p>
                 </div>

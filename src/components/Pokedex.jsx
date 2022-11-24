@@ -82,7 +82,7 @@ const Pokedex = () => {
               <button onClick={serachPokemon}>search</button>
             </label>
 
-            <div >
+            <div>
               <select onChange={filterType} name="" id="">
               {typePokemon.map(type =>(
                 <option 
@@ -123,7 +123,7 @@ const Pokedex = () => {
             ))}
           </div>
         </section>
-        
+
         <section className='pagination'>
           <button 
             className='button-pagination'
